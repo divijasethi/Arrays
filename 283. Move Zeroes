@@ -2,10 +2,10 @@ class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
         
-        int j=0;
+        int j=0;  // creating  pointer which will first have all the non zero values
         for(int i=0; i<nums.size(); i++){
             
-            if(nums[i]!=0){
+            if(nums[i]!=0){  //if the number which i is pointing to isn't equal to zero, it includes a non-zero number which we will store in j and interatef orward
                
                 nums[j]=nums[i];
                 j++;
@@ -14,7 +14,10 @@ public:
             
         }
         
-        while(j<nums.size())nums[j++]=0; 
+        while(j<nums.size()) 
+        {
+            nums[j++]=0; 
+        }
                                
     }
 };
