@@ -16,7 +16,7 @@ public:
         
         while(j<nums.size()) 
         {
-            nums[j++]=0; // put j=0 and iterate forward
+            nums[j++]=0; // put j=0 from current jth position till the end
         }
                                
     }
