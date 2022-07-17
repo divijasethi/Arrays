@@ -12,7 +12,7 @@ public:
 
 
 //solution 2:
-// creates another array and stores the value their
+// creates another array and stores the value there
 class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {
