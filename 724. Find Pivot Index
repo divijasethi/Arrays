@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int pivotIndex(vector<int>& nums) {
+        
+        int t_sum=0, rs=0, ls=0;  //where t_sum is the total sum, rs=right sum, ls = left sum.
+        
+        for(int i=0; i<nums.size(); i++){
+            
+            t_sum+= nums[i];    // sum of entire array and then store it in right sum
+        }
+        
+        rs = t_sum; 
+        for(int i=0; i<nums.size(); i++){
+            ls+=nums[i];        // add in left sum, and remove the same number you're adding in left from right until both sums are equal, and then return that very no.
+            if(ls==rs) return i;
+            
+            rs-=nums[i];
+        }
+        return -1;
+            
+            
+        
+    } 
+};
